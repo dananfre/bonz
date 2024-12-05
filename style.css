@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Red Hat Mono';
+    font-weight: 400;
+    font-size: 2.2em;
+}
+
+h2, h3, h4 {
+    font-family: 'Red Hat Mono';
+    font-weight: 400;
+}
+
+p {
+    font-family: verdana;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+:root {
+    --main-color: rgb(0, 20, 0, 1);
+    --main-color-transp: rgb(0, 20, 0, 0.6);
+    --secondary-color: rgb(139, 147, 69, 1)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+}
+
+/* Header styles */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 6em;
+    padding: 1em;
+    font-family: 'Red Hat Mono';
+}
+
+.header__logo {
+    width: 250px;
+    height: auto;
+}
+
+.header__nav {
+    align-self: flex-end;
+}
+
+.header__list {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+.header__item {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.header__link {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.header__link:hover {
+    color: var(--secondary-color)
+}
+
+@media (max-width: 500px) {
+    
+    .header {
+        flex-direction: column;
+        height: 7em;
+    }
+    
+    .header__logo {
+        width: 220px;
+        height: auto;
+    }
+
+    .header__nav {
+        align-self: center;
+        margin-top: 0.5em;
+    }
+
+    .header__item {
+        font-size: 1.1em;
+    }
+    
+}
+
+/* Banner styles */
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 20em;
+}
+
+.banner__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner__heading {
+    position: absolute;
+    padding: 0.4em;
+    top: 0.6em;
+    left: 0.6em;
+    right: auto;
+    background-color: var(--main-color);
+    color: white;
+    max-width: 9em;
+}
+
+.banner__text {
+    position: absolute;
+    padding: 0.6em;
+    top: 7em;
+    left: 1.3em;
+    right: auto;
+    font-size: 1em;
+    line-height: 1.7em;
+    color: white;
+    background-color: var(--main-color);
+    max-width: 23em;
+}
+
+@media (max-width: 850px) {
+    .banner__text {
+        background-color: var(--main-color-transp);
+        top: 10em;
+    }
+}
+
+
+/* Master, for index.html only */
+
+.master {
+    display: flex;
+    justify-content: space-between;
+    max-height: 30em;
+    background-color: var(--main-color);
+    color: white;    
+}
+
+.master__text {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 6em 2em 2em;
+    width: 60%;
+}
+
+.master__h1 {
+    font-family: 'Red Hat Mono';
+    font-weight: 400;
+    font-size: 2.2em;
+}
+
+.master__p {
+    font-family: verdana;
+    line-height: 2;
+}
+
+.master__imagecontainer {
+    width: 40%;
+}
+
+.master__image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.master__book {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0em 1em 0em;
+    padding: 1em;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.master__wheelsymbol {
+    height: 2.3em;
+    opacity: 0.5;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.master__book:hover .master__wheelsymbol {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+@media (max-width: 850px) {
+    .master__book {
+        display: none;
+    }
+}
+
+/* Main, for index only */
+
+.main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    background-color: white;
+    padding: 1em;
+}
+
+.main__offer {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+    padding: 1em;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+}
+
+.main__linktext {
+    font-family: 'Red Hat Mono';
+    font-size: 1.3em;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.main__card {
+    position: relative;
+}
+
+.main__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main__overlay {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0.7em;
+    bottom: 0.6em;
+    left: 0.6em;
+    right: 0.6em;
+    background-color: var(--main-color);
+}
+
+.main__wheelsymbol {
+    height: 1.8em;
+    opacity: 0.5;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.main__offer:hover .main__wheelsymbol {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+.main__overlay:hover .main__wheelsymbol {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+@media (max-width: 850px) {
+    
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 460px) {
+    
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .main__offer {
+        grid-column: span 1;
+    }
+}
+
+/* About, for about.html and booking.html */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    gap: 1em;
+    padding: 1em;
+    background-color: var(--main-color)
+}
+
+.about__article {
+    grid-column: span 3;
+    display: flex;
+    min-height: 8em;
+    background-color: lightgrey;
+}
+
+.about__image {
+    width: 30%;
+    height: auto;
+    max-width: 200px;
+    object-fit: cover;
+}
+
+.about__infotext {
+    margin: 1em;
+}
+
+.about__h2 {
+    margin-bottom: 0.3em;
+    font-weight: 600;
+}
+
+.about__bookrow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.about__beds {
+    display: flex;
+    align-items: center;
+}
+
+.about__bedicon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: auto;
+}
+
+.about__book {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0.5em;
+    min-width: 7em;
+}
+
+.about__bookbutton {
+    background-color: var(--main-color);
+    color: white;
+    padding: 0.5em;
+    border: none;
+    cursor: pointer;
+}
+
+.about__bookbutton:hover {
+    background-color: var(--secondary-color);
+}
+
+.about__aside {
+    grid-column: span 1;
+    grid-row: span 4;
+    min-height: 40em;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1em;
+}
+
+@media (max-width: 850px) {
+    .about {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about__article {
+        grid-column: span 2;
+    }
+    .about__aside {
+        display: none;
+    }
+    .about__imagevivibilitytoggle {
+        display: none;
+    }
+}
+
+/* Booking for booking.html */
+
+.booking {
+    grid-column: span 1;
+    grid-row: span 4;
+    padding: 1em;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+.booking--mobile {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.booking--mobile {
+    display: none;
+}
+
+.booking__heading {
+    margin-bottom: 0.5em;
+}
+
+.booking__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+.booking__label {
+    font-family: verdana;
+    font-size: 0.8em;
+}
+
+.booking__input,
+.booking__select {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+}
+
+.booking__searchbutton {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7em;
+    bottom: 0.6em;
+    left: 0.6em;
+    right: 0.6em;
+    margin-top: 0.6em;
+    background-color: var(--main-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.booking__linktext {
+    font-family: 'Red Hat Mono';
+    font-size: 1.3em;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.booking__wheelsymbol {
+    height: 1.8em;
+    opacity: 0.5;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.booking__searchbutton:hover .booking__wheelsymbol {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+@media (max-width: 850px) {
+    
+    .booking--mobile {
+        display: block;
+    }
+
+    .booking--desktop {
+        display: none;
+    }
+
+}
+
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.footer__link {
+    color: white;
+    margin: 1em;
+}
+
+.footer__symbolscontainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.footer__symbol {
+    max-width: 2em;
+    max-height: auto;
+    margin: 1em;
+}
+

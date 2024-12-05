@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Book</title>
+</head>
+<body>
+    
+    <header class="header">
+        <img src="assets/bonzLogo.png" alt="Bonzo.ai logo" class="header__logo">
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
+                <li class="header__item"><a href="about.html" class="header__link">About</a></li>
+                <li class="header__item"><a href="booking.html" class="header__link">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <img src="assets/mastermindwhole.png" alt="Abstract banner image" class="banner__image">
+        <h1 class="banner__heading">Our Rooms</h1>
+        <p class="banner__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, repellat vitae delectus illo doloribus ipsum repellendus. </p>
+    </section>
+    
+    <section class="about">
+        
+        <section class="booking booking--mobile">  
+            <h1 class="booking__heading">Search Room</h1>
+                <form action="searchresult.html" method="get" class="booking__form">
+                    <label for="checkin" class="booking__label">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" class="booking__input" required>
+        
+                    <label for="checkout" class="booking__label">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" class="booking__input" required>
+        
+                    <label for="guests" class="booking__label">Number of Guests:</label>
+                    <select id="guests" name="guests" class="booking__select" required>
+                        <option value="1">1 person</option>
+                        <option value="2">2 persons</option>
+                        <option value="3">3 persons</option>
+                        <option value="4">4 persons</option>
+                    </select>
+                    <a href="search.html" class="booking__searchbutton">
+                        <p class="booking__linktext">Search</p>
+                        <img src="assets/spin.svg" alt="logo element" class="booking__wheelsymbol">
+                    </a>
+                </form>         
+        </section>
+       
+        <article class="about__article">
+            <img src="assets/room1.png" alt="Room 1" class="about__image">
+            <div class="about__infotext">    
+                <h2 class="about__h2">The Node</h2>   
+                <p class="about__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, repellat vitae delectus illo doloribus ipsum repellendus. Ducimus, nemo dicta. Pariatur dolorem suscipit sequi sunt perspiciatis ipsam veritatis consectetur ratione! Modi.</p>    
+                <div class="about__bookrow">    
+                    <div class="about__beds">
+                        <img src="assets/bed.svg" alt="bed icon" class="about__bedicon">
+                        <p class="about__p">2 beds</p>
+                    </div>
+                    <div class="about__book">    
+                        <button class="about__bookbutton">Book</button>
+                    </div>    
+                </div>    
+            </div>           
+        </article>
+        
+        <section class="booking booking--desktop">  
+            <h1 class="booking__heading">Search Room</h1>
+                <form action="searchresult.html" method="get" class="booking__form">
+                    <label for="checkin" class="booking__label">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" class="booking__input" required>
+        
+                    <label for="checkout" class="booking__label">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" class="booking__input" required>
+        
+                    <label for="guests" class="booking__label">Number of Guests:</label>
+                    <select id="guests" name="guests" class="booking__select" required>
+                        <option value="1">1 person</option>
+                        <option value="2">2 persons</option>
+                        <option value="3">3 persons</option>
+                        <option value="4">4 persons</option>
+                    </select>
+                    <a href="search.html" class="booking__searchbutton">
+                        <p class="booking__linktext">Search</p>
+                        <img src="assets/spin.svg" alt="logo element" class="booking__wheelsymbol">
+                    </a>
+                </form>         
+        </section>
+
+        <article class="about__article">
+            <img src="assets/room2.png" alt="Room 1" class="about__image">
+            <div class="about__infotext">    
+                <h2 class="about__h2">Natural flow</h2>   
+                <p class="about__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, repellat vitae delectus illo doloribus ipsum repellendus. Ducimus, nemo dicta. Pariatur dolorem suscipit sequi sunt perspiciatis ipsam veritatis consectetur ratione! Modi.</p>    
+                <div class="about__bookrow">    
+                    <div class="about__beds">
+                        <img src="assets/bed.svg" alt="bed icon" class="about__bedicon">
+                        <p class="about__p">4 beds</p>
+                    </div>
+                    <div class="about__book">    
+                        <button class="about__bookbutton">Book</button>
+                    </div>    
+                </div>    
+            </div>   
+        </article>
+
+        <article class="about__article">
+            <img src="assets/room3.png" alt="Room 1" class="about__image">
+            <div class="about__infotext">    
+                <h2 class="about__h2">Artificial Dream</h2>   
+                <p class="about__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, repellat vitae delectus illo doloribus ipsum repellendus. Ducimus, nemo dicta. Pariatur dolorem suscipit sequi sunt perspiciatis ipsam veritatis consectetur ratione! Modi.</p>    
+                <div class="about__bookrow">    
+                    <div class="about__beds">
+                        <img src="assets/bed.svg" alt="bed icon" class="about__bedicon">
+                        <p class="about__p">2 beds</p>
+                    </div>
+                    <div class="about__book">    
+                        <button class="about__bookbutton">Book</button>
+                    </div>    
+                </div>    
+            </div>
+        </article>
+
+        <article class="about__article">
+            <img src="assets/room4.png" alt="Room 1" class="about__image">
+            <div class="about__infotext">    
+                <h2 class="about__h2">As Green as it Gets</h2>   
+                <p class="about__p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, repellat vitae delectus illo doloribus ipsum repellendus. Ducimus, nemo dicta. Pariatur dolorem suscipit sequi sunt perspiciatis ipsam veritatis consectetur ratione! Modi.</p>    
+                <div class="about__bookrow">    
+                    <div class="about__beds">
+                        <img src="assets/bed.svg" alt="bed icon" class="about__bedicon">
+                        <p class="about__p">3 beds</p>
+                    </div>
+                    <div class="about__book">    
+                        <button class="about__bookbutton">Book</button>
+                    </div>   
+                </div>    
+            </div>
+        </article>   
+    
+    </section>
+    
+    <footer class="footer">
+        <div class="footer__links">  
+            <p class="footer__link">Purchase conditions</p>
+            <p class="footer__link">Cookies</p>
+            <p class="footer__link">Contact</p>
+        </div>
+        <div class="footer__symbolscontainer">
+            <img src="assets/instagram.svg" alt="instagram logo" class="footer__symbol">
+            <img src="assets/facebook.svg" alt="facebook logo" class="footer__symbol">
+        </div>    
+    </footer>
+
+</body>
+</html>
