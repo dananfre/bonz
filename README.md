@@ -1,12 +1,12 @@
-#Bonz.ai - 
+# Bonz.ai - 
 Examinationsuppgift i kursen HTML & CSS 40yhp på utbildningen Frontendutvecklare Distans 400 YH-poäng.
 
-##Funktionella krav
+## Funktionella krav
 - En startsida
 - En sida om hotellet och dess feciliteter
 - En bokningssida
 
-##Tekniska krav
+## Tekniska krav
 - Responsivitet
 - Använda CSS Grid och Flexbox
 - Använda bilder
